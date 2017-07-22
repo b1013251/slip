@@ -9,7 +9,11 @@ const loadDevtool = require('electron-load-devtool');
 let win
 let fullWin
 let createWindow = () => {
-  win = new BrowserWindow({width: 1024, height:764})
+  win = new BrowserWindow({
+    width: 1024,
+    height:764,
+    toolbar: false
+  })
   win.loadURL(`file://${__dirname}/../client/index.html`)
   win.on('closed', () => {
     win = null
@@ -26,6 +30,9 @@ let createWindow = () => {
   fullWin.on('closed', () => {
     fullWin = null
   })
+  fullWin.setMenuBarVisibility(false);
+  fullWin.setAlwaysOnTop(true)
+  fullWin.setAutoHideMenuBar(true);
 }
 
 let initWindowMenu = () => {

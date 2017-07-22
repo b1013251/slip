@@ -5,11 +5,11 @@ packager({
     name: package["name"],
     dir: ".",// ソースフォルダのパス
     out: ".",// 出力先フォルダのパス
-    platform: "linux",
+    platform: "win32",
     arch: "x64",
-    version: "1.4.15",// Electronのバージョン
+    version: "1.6.11",// Electronのバージョン
     overwrite: true,// 上書き
-    asar: false,// asarパッケージ化
+    asar: true,// asarパッケージ化
     "app-version": package["version"],
     "app-copyright": "Copyright (C) 2017 "+package["author"]+".",// コピーライト
     
