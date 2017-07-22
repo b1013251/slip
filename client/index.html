@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>slip - PDF Slide Viewer</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+      <div id="main">
+          <div id="now_page">
+              <canvas id="now" width="624" height="468"></canvas>
+          </div>
+          <div id="timer">
+            <h4>操作欄</h4>
+            <form>
+            <button id="movePrev">Previous</button>
+            <button id="moveNext">Next</button>
+            <input type="number" value="" id="number"/>
+            <button id="set">Set</button>
+            </form>
+            <h4>タイマー</h4>
+            <form>
+            <input type="text" value="" id="watch"/>
+            <button id="start_stop">Start</button>
+            <button id="clear">Pause</button>
+            </form>
+          </div>
+      </div>
+      <div id="side">
+          <div id="next_page">
+              <canvas id="next" width="400" height="300"></canvas>
+          </div>
+          <div id="memo">
+            <h4>メモ欄</h4>
+            <div id="memoContent">
+            </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    window.onload = function() {
+      require('babel-register')()
+      require('./main.js')
+    };
+  </script>
+</body
+</html>
