@@ -11,10 +11,10 @@ let fullWin
 let createWindow = () => {
   win = new BrowserWindow({
     width: 1024,
-    height:764,
+    height:800,
     toolbar: false
   })
-  win.loadURL(`file://${__dirname}/../client/index.html`)
+  win.loadURL(`file:///${__dirname}/./client/index.html`)
   win.on('closed', () => {
     win = null
     app.quit()
@@ -26,12 +26,12 @@ let createWindow = () => {
 
   fullWin = new BrowserWindow()
   fullWin.setFullScreen(true)
-  fullWin.loadURL(`file://${__dirname}/../client/full.html`)
+  fullWin.loadURL(`file:///${__dirname}/./client/full.html`)
   fullWin.on('closed', () => {
     fullWin = null
   })
   fullWin.setMenuBarVisibility(false);
-  fullWin.setAlwaysOnTop(true)
+  fullWin.setAlwaysOnTop(false)
   fullWin.setAutoHideMenuBar(true);
 }
 

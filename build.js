@@ -9,7 +9,7 @@ packager({
     arch: "x64",
     version: "1.6.11",// Electronのバージョン
     overwrite: true,// 上書き
-    asar: true,// asarパッケージ化
+    asar: false,// asarパッケージ化
     "app-version": package["version"],
     "app-copyright": "Copyright (C) 2017 "+package["author"]+".",// コピーライト
     
